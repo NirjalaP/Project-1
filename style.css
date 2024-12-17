@@ -1,0 +1,64 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    /* Set background image */
+    background-image: url('../assets/images/zoo-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background stays fixed when scrolling */
+    color: #fff;
+}
+
+.container {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Makes the content easier to read on the background */
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+h1, h2, h3 {
+    color: #fff;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    padding: 15px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Change to yellow when hovering */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
