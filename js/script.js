@@ -1,24 +1,5 @@
 $(document).ready(function() {
-        // Table Filtering (Animals Page)
-        // $('#search-bar').on('input', function(e) {
-        //     const searchTerm = e.target.value.toLowerCase();
-        //     $('.animal-card').each(function() {
-        //         const animal = $(this).data('animal').toLowerCase();
-        //         const habitat = $(this).data('habitat').toLowerCase();
-        //         const region = $(this).data('region').toLowerCase();
     
-        //         if (
-        //             animal.includes(searchTerm) ||
-        //             habitat.includes(searchTerm) ||
-        //             region.includes(searchTerm)
-        //         ) {
-        //             $(this).show(); // Show the card
-        //         } else {
-        //             $(this).hide(); // Hide the card
-        //         }
-        //     });
-        // });
-
     // Ticket Purchase Form Validation (tickets.html)
     $('#ticket-form').submit(function(event) {
         event.preventDefault(); // Prevent form submission
@@ -60,9 +41,6 @@ $(document).ready(function() {
             // Show success alert
             alert("Thank you, " + name + ". You have successfully purchased " + tickets + " ticket(s) for " + date + ". A verification mail has been sent to " + email + ".");
         } 
-        // else {
-        //     alert("Please fill out all fields correctly!");
-        // }
     });
     
     // Contact Form Validation (contact.html)
