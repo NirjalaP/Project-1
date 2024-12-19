@@ -1,62 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animals</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-        <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Zoo Website</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="animals.html">Animals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tickets.html">Tickets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Animals - Zoo Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Zoo Website</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="animals.html">Animals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tickets.html">Tickets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-content container text-center py-5">
+        <h1>Discover Our Animals</h1>
+        <p class="lead">Meet the Incredible Creatures That Call Our Zoo Home</p>
+      </div>
+    </header>
+
+    <main class="container mt-n5">
+      <div class="search-section bg-white p-4 rounded-3 shadow mb-4">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h4 class="mb-3 mb-md-0">Animals and Their Habitats</h4>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              <span class="input-group-text bg-primary text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                id="search-bar"
+                class="form-control"
+                placeholder="Search for animals..."
+              />
             </div>
-        </nav>
-    
-    <div class="container mt-5">
-        <h2>Animals and Their Habitats</h2>
-        <table class="table table-striped" id="animal-table">
-            <thead>
-                <tr>
-                    <th>Animal</th>
-                    <th>Habitat</th>
-                    <th>Region</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Lion</td><td>Savannah</td><td>Africa</td></tr>
-                <tr><td>Tiger</td><td>Rainforest</td><td>Asia</td></tr>
-                <tr><td>Elephant</td><td>Grasslands</td><td>Asia</td></tr>
-                <tr><td>Zebra</td><td>Savannah</td><td>Africa</td></tr>
-            </tbody>
-        </table>
+          </div>
+        </div>
+      </div>
 
-        <!-- jQuery Filter -->
-        <input type="text" id="search-bar" class="form-control" placeholder="Search for animals...">
-    </div>
+      <div class="animal-grid row g-4">
+        <div
+          class="col-md-3 animal-card"
+          data-animal="Lion"
+          data-habitat="Savannah"
+          data-region="Africa"
+        >
+          <div class="card h-100 shadow-sm">
+            <img src="images/lion-small.jpg" class="card-img-top" alt="Lion" />
+            <div class="card-body">
+              <h5 class="card-title">Lion</h5>
+              <p class="card-text">
+                <span class="badge bg-primary me-2">Savannah</span>
+                <span class="badge bg-secondary">Africa</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-3 animal-card"
+          data-animal="Tiger"
+          data-habitat="Rainforest"
+          data-region="Asia"
+        >
+          <div class="card h-100 shadow-sm">
+            <img src="images/tiger.jpg" class="card-img-top" alt="Tiger" />
+            <div class="card-body">
+              <h5 class="card-title">Tiger</h5>
+              <p class="card-text">
+                <span class="badge bg-primary me-2">Rainforest</span>
+                <span class="badge bg-secondary">Asia</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-3 animal-card"
+          data-animal="Elephant"
+          data-habitat="Grasslands"
+          data-region="Asia"
+        >
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/elephant.jpg"
+              class="card-img-top"
+              alt="Elephant"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Elephant</h5>
+              <p class="card-text">
+                <span class="badge bg-primary me-2">Grasslands</span>
+                <span class="badge bg-secondary">Asia</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-3 animal-card"
+          data-animal="Zebra"
+          data-habitat="Savannah"
+          data-region="Africa"
+        >
+          <div class="card h-100 shadow-sm">
+            <img src="images/zebra.jpg" class="card-img-top" alt="Zebra" />
+            <div class="card-body">
+              <h5 class="card-title">Zebra</h5>
+              <p class="card-text">
+                <span class="badge bg-primary me-2">Savannah</span>
+                <span class="badge bg-secondary">Africa</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    <script src="js/script.js"></script>
-</body>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <p class="mb-0">&copy; 2024 Zoo Website. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("search-bar")
+        .addEventListener("input", function (e) {
+          const searchTerm = e.target.value.toLowerCase();
+          const cards = document.querySelectorAll(".animal-card");
+
+          cards.forEach((card) => {
+            const animal = card.dataset.animal.toLowerCase();
+            const habitat = card.dataset.habitat.toLowerCase();
+            const region = card.dataset.region.toLowerCase();
+
+            if (
+              animal.includes(searchTerm) ||
+              habitat.includes(searchTerm) ||
+              region.includes(searchTerm)
+            ) {
+              card.style.display = "";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+    </script>
+  </body>
 </html>
