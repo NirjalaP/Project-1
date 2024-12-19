@@ -9,41 +9,37 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Zoo Website</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="animals.html">Animals</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tickets.html">Tickets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="animals.html">Animals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
-    </nav>
-    
-    <!-- Content of the Page -->
-    <div class="container">
-        <h1>Welcome to the Zoo</h1>
-        <p>Explore the zoo's amazing animals and much more!</p>
-    </div>
+        </nav>
+    </header>
 
-    <!-- Include JavaScript Files -->
-    <script src="js/script.js"></script>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to the Zoo</h1>
+            <p>Explore the Wild, Discover Amazing Animals</p>
+        </div>
+    </section>
+
+    <section class="animal-feature">
+        <h2>Featured Animal</h2>
+        <div id="animal-info">
+            <vue-component></vue-component> <!-- Vue.js Component -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Zoo Website</p>
+    </footer>
+
     <script src="js/vue-component.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

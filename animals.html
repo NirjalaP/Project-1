@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Zoo Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="animals.html">Animals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tickets.html">Tickets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+    <div class="container mt-5">
+        <h2>Animals and Their Habitats</h2>
+        <table class="table table-striped" id="animal-table">
+            <thead>
+                <tr>
+                    <th>Animal</th>
+                    <th>Habitat</th>
+                    <th>Region</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Lion</td><td>Savannah</td><td>Africa</td></tr>
+                <tr><td>Tiger</td><td>Rainforest</td><td>Asia</td></tr>
+                <tr><td>Elephant</td><td>Grasslands</td><td>Asia</td></tr>
+                <tr><td>Zebra</td><td>Savannah</td><td>Africa</td></tr>
+            </tbody>
+        </table>
+
+        <!-- jQuery Filter -->
+        <input type="text" id="search-bar" class="form-control" placeholder="Search for animals...">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
