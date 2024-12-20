@@ -1,5 +1,16 @@
 $(document).ready(function() {
     
+    // Dynamic Vue.js example
+    const app = Vue.createApp({
+        data() {
+            return {
+                featuredAnimal: "African Lion",
+                habitat: "African Savanna",
+            };
+        },
+    });
+    app.mount(".animal-feature");
+    
     // Ticket Purchase Form Validation (tickets.html)
     $('#ticket-form').submit(function(event) {
         event.preventDefault(); // Prevent form submission
@@ -83,5 +94,20 @@ $(document).ready(function() {
             alert("Thank you, " + name + ". Your message has been successfully recieved");
         } 
     });
+    
+    $('.navbar a').hover(
+        function () {
+            $(this).css({
+                'text-decoration': 'underline',
+                color: '#ff9800', // Change text color to orange
+            });
+        },
+        function () {
+            $(this).css({
+                'text-decoration': 'none',
+                color: '', // Reset to original color
+            });
+        }
+    );
 });
 
